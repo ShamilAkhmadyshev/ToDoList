@@ -2,35 +2,80 @@
 <html lang="ru">
 
 <head>
-    <title>Позиционирование</title>
-    <meta>
+    <title>To DO List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="content-top">
-        <p>TRAVEL</p>
-        <p>Donec sed odio dui. Cras mattis consectetur purus <br> sit amet fermentum. </p>
-    </div>
-    <div class="img">
-        <img src="../../img/light-man_copy.png" alt="man in the field">
-    </div>
-    <div class="content-middle">
-        <p>Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.
-            Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
-    </div>
-    <div class="content-bottom top">
-        <ul>
-            <li>Put on this page information about your product</li>
-            <li>A detailed description of your product</li>
-            <li>Tell us about the advantages and merit1s</li>
-            <li><span>Associate the page with the payment system</span></li>
-        </ul>
-    </div>
-    <a class="link" href="#"></a>
-    <div class="margin">&</div>
+    <main>
+        <div class="wrapper">
+            <section class="greeting">
+                <h2 class="greeting__title">Welcome to ToDo List, <input type="text" id="name"
+                        placeholder="write your name here"></h2>
+
+            </section>
+            <section class="addtodo">
+                <h3 class="addtodo__title">Create new task</h3>
+                <form id="addtodo_form" class="addtodo__form form">
+                    <h4 class="form__title">What do your want to add?</h4>
+                    <input type="text" name="content" id="content" placeholder="Buy some bread" required>
+                    <h4 class="form__subtitle">Choose a category</h4>
+                    <div class="form__options">
+                        <label>
+                            <input required type="radio" name="category" value="business" id="category1">
+                            <span class="bubble businsess"></span>
+                            <div>Business</div>
+                        </label>
+                        <label>
+                            <input required type="radio" name="category" value="presonal" id="category2">
+                            <span class="bubble personal"></span>
+                            <div>Personal</div>
+                        </label>
+                    </div>
+                    <input type="submit" value="Add some task">
+                </form>
+            </section>
+
+            <section class="todolist">
+                <h3>ToDo List</h3>
+                <div class="todolist__list" id="todolist">
+                    <div class="todolist__item">
+                        <label>
+                            <input type="checkbox">
+                            <span class="bubble business"></span>
+                        </label>
+                        <div class="todolist__content">
+                            <input type="text" value="Do some work" readonly>
+                        </div>
+                        <div class="todolist__actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="todolist__item">
+                        <label>
+                            <input type="checkbox">
+                            <span class="bubble personal"></span>
+                        </label>
+                        <div class="todolist__content">
+                            <input type="text" value="Clean your tooth" readonly>
+                        </div>
+                        <div class="todolist__actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
